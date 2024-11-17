@@ -651,6 +651,9 @@ button {
   transition: all 0.3s ease;
 }
 
+.moments-book {
+  padding-top: 70px;
+}
 .moments-book .book__title {
   font-size: 32px;
   font-weight: 600;
