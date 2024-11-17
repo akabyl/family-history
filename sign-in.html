@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Семейная История | Вход</title>
+		<link
+			href="https://cdn.prod.website-files.com/650710bbacf34e9a15e8804a/660d3656f6c4c43462d9a5ec_32%20%D0%BD%D0%B0%2032%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%203.jpg"
+			rel="shortcut icon"
+			type="image/x-icon"
+		/>
+		<link
+			href="https://cdn.prod.website-files.com/650710bbacf34e9a15e8804a/660d39267980f02a8e7d0681_256_256.jpg"
+			rel="apple-touch-icon"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__row">
+						<nav class="header__nav nav">
+							<ul class="nav__list">
+								<li class="nav__item">
+									<a href="#!">Съемки</a>
+								</li>
+								<li class="nav__item">
+									<a href="#!">Книги</a>
+								</li>
+								<li class="nav__item">
+									<a href="#!">Корзина</a>
+									<p class="nav__text">14 товаров</p>
+								</li>
+							</ul>
+						</nav>
+						<div class="header__logo logo">
+							<a class="logo__link" href="#!">
+								<img src="./img/icons/logo.svg" alt="" />
+							</a>
+						</div>
+						<div class="header__account account">
+							<button class="account__text sign-in">Вход</button>
+							<span></span>
+							<button class="account__text registration">Регистрация</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section class="auth">
+					<div class="container">
+						<div class="back-button">
+							<button id="back" class="back hidden">
+								<img src="./img/icons/arrow-back.svg" alt="" />
+							</button>
+						</div>
+						<div class="registration-container">
+							<div class="step active" id="step-1">
+								<div class="step__top">
+									<h2 class="step__title">Вход</h2>
+
+									<img class="line-max" src="./img/icons/line.svg" alt="" />
+									<p class="step__level">Этап 1/3</p>
+								</div>
+								<div class="step__inner">
+									<div class="step__center">
+										<button class="step__btn active" data-method="email">Вход по почте</button>
+										<button class="step__btn" data-method="phone">Вход по телефону</button>
+									</div>
+									<div class="next">
+										<button id="next-btn" class="next-btn">Продолжить</button>
+									</div>
+									<div class="login-link">У вас нет аккаунта? <a href="#">Зарегистрироваться</a></div>
+									<button class="help modal-btn">Не получается войти?</button>
+								</div>
+							</div>
+							<div class="step" id="step-2">
+								<div class="step__top">
+									<h2 class="step__title">Вход</h2>
+									<img class="line-max" src="./img/icons/line.svg" alt="" />
+									<p class="step__level">Этап 2/3</p>
+								</div>
+								<div class="step__inner">
+									<div class="step__form step__sign-in-form phone-input">
+										<div class="step__input-box">
+											<div class="country-code">+7</div>
+											<input class="step__input" type="tel" id="sign-tel" placeholder="Ваш номер телефона" />
+										</div>
+									</div>
+									<div class="step__form step__sign-in-form email-input">
+										<div class="step__input-box">
+											<input class="step__input" type="email" id="sign-email" placeholder="Ваша почта" />
+										</div>
+									</div>
+									<div class="step__error">
+										<div class="step__error-img">
+											<img src="./img/icons/error.svg" alt="" />
+										</div>
+										<div class="step__error-text">Неверный номер телефона</div>
+									</div>
+									<button id="next-btn-2" class="next-btn">Получить код</button>
+									<div class="login-link">У вас нет аккаунта? <a href="#">Зарегистрироваться</a></div>
+									<button class="help modal-btn">Не получается войти?</button>
+								</div>
+							</div>
+							<div class="step" id="step-3">
+								<div class="step__top">
+									<h2 class="step__title">Вход</h2>
+									<img class="line-max" src="./img/icons/line.svg" alt="" />
+									<p class="step__level">Этап 3/3</p>
+								</div>
+								<div class="step__inner">
+									<p class="step-text-code">Введите код, который пришел вам на телефон +7 925 999 99 99</p>
+									<div class="step__form step__sign-in-form">
+										<div class="step__input-box">
+											<input class="step__input" type="text" id="sms-code" />
+										</div>
+									</div>
+
+									<div class="step__error">
+										<div class="step__error-img">
+											<img src="./img/icons/error.svg" alt="" />
+										</div>
+										<div class="step__error-text">Введите свою почту</div>
+									</div>
+									<button id="next-btn-3" class="next-btn">Продолжить</button>
+									<button class="code-btn-error">Не приходит код</button>
+									<div class="login-link">У вас нет аккаунта? <a href="#">Зарегистрироваться</a></div>
+									<button class="help modal-btn">Не получается войти?</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<div class="modal-wrapper">
+			<!-- <div class="modal">
+				<div class="modal-sign">
+					<h2 class="modal__title help-title">Не получается войти?</h2>
+					<p class="modal__text help-text">Наши менеджеры с радостью помогут в решении вашей проблемы</p>
+					<button class="modal__btn help-btn">Перейти в What’s app</button>
+				</div>
+				<button class="modal__close close">
+					<img src="./img/icons/close.svg" alt="" />
+				</button>
+			</div> -->
+			<div class="modal">
+				<div class="modal-code">
+					<h2 class="modal__title help-title">Код отправлен повторно</h2>
+					<p class="modal__text help-text">
+						Проверьте пожалуйста папку спам. Если не нашли код, то напишите в наш чат поддержки
+					</p>
+					<button class="modal__btn help-btn">Перейти в What’s app</button>
+				</div>
+				<button class="modal__close close">
+					<img src="./img/icons/close.svg" alt="" />
+				</button>
+			</div>
+		</div>
+		<div class="overlay"></div>
+		<script src="./js/sign-in.js"></script>
+		<script src="./js/modal.js"></script>
+	</body>
+</html>

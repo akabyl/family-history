@@ -1,0 +1,47 @@
+.btn {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+}
+
+.btn-fill {
+	padding: 5px 14px;
+	border-radius: 100px;
+}
+.btn-primary {
+	background-color: #e6e6e6;
+}
+
+.btn-accent {
+	background: #ff9fcd;
+	color: #fff;
+}
+
+.btn-text {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.download {
+	padding: 14px 24px;
+	max-width: 139px;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	backdrop-filter: blur(30px);
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 10000px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 1002;
+	span {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 20px;
+	}
+}
+

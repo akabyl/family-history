@@ -1,0 +1,22 @@
+.header {
+  padding: 17px 0;
+  margin-bottom: 40px;
+	// .header__row
+	&__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	}
+	// .header__nav
+	&__nav {
+	}
+	// .header__logo
+	&__logo {
+    max-width: 400px;
+    width: 100%;
+	}
+	// .header__account
+	&__account {
+	}
+}
+

@@ -1,0 +1,51 @@
+.book {
+	padding-top: 20px;
+	// .book__row
+	&__row {
+	}
+	// .book__title
+	&__title {
+		font-size: 52px;
+		font-weight: 600;
+		line-height: 66px;
+	}
+	// .book__text
+	&__text {
+		font-size: 32px;
+		font-weight: 300;
+		line-height: 48px;
+		margin-bottom: 20px;
+	}
+	// .book__wrapper
+	&__wrapper {
+		width: 100%;
+		height: 650px;
+		background-color: #ffe1a6;
+		position: relative;
+    border-radius: 20px;
+	}
+	// .book__btn
+	&__btn {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 20px;
+		padding: 12px 20px;
+		border-radius: 877px;
+		background-image: url('./../img/btn-bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		color: #fff;
+		transition: all 0.3s ease;
+	}
+}
+.moments-book {
+	.book__title {
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 40px;
+	}
+}

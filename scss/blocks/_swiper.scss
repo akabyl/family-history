@@ -1,0 +1,62 @@
+.swiper-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9); /* Тёмный фон */
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.swiper-slide img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: auto;
+}
+
+.custom-next,
+.custom-prev {
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	height: 50px;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 1001;
+}
+
+.custom-next {
+	right: 20px;
+}
+
+.custom-prev {
+	left: 20px;
+}
+
+.custom-next img,
+.custom-prev img {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+	z-index: 999; /* За overlay */
+}
+
+.swiper-overlay.hidden {
+	display: none;
+}
+
+.swiper-container.hidden {
+	display: none; /* Скрывает слайдер */
+}

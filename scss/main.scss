@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Onest:300,regular,500,600,700);
+
+/* Base */
+@import './base/reset';
+@import './base/vars';
+@import './base/base';
+@import './base/containers';
+
+/* Blocks */
+@import './blocks/utils';
+@import './blocks/header';
+@import './blocks/nav';
+@import './blocks/logo';
+@import './blocks/account';
+@import './blocks/head';
+@import './blocks/btn';
+@import './blocks/content';
+@import './blocks/video';
+@import './blocks/photo-gallery';
+@import './blocks/swiper';
+@import './blocks/history';
+@import './blocks/book';
+@import './blocks/settings';
+@import './blocks/form';
+@import './blocks/modal';
+@import './blocks/registration';
+@import './blocks/sign-in';
+

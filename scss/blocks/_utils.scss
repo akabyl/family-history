@@ -1,0 +1,18 @@
+.flex {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+.main {
+	position: relative;
+	padding-bottom: 40px;
+}
+
+.no-scroll {
+	overflow: hidden;
+}

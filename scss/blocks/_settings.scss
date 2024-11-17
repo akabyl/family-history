@@ -1,0 +1,143 @@
+.settings {
+	// .settings__inner
+	&__inner {
+	}
+	// .settings__top
+	&__top {
+		margin-bottom: 50px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		justify-content: space-between;
+	}
+	// .settings__left
+	&__left {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+	// .settings__title
+	&__title {
+		font-size: 52px;
+		font-weight: 600;
+		line-height: 66px;
+		color: #000000;
+	}
+	// .settings__right
+	&__right {
+	}
+	// .settings__btn
+	&__btn {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 20px;
+		padding: 12px 20px;
+		background-color: #ff9fcd;
+		color: #fff;
+		border-radius: 877px;
+	}
+	// .settings__form
+	&__form {
+	}
+}
+.back {
+}
+.add {
+}
+.settings-form {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	max-width: 1725px;
+	// .settings-form__inner
+	&__inner {
+		max-width: 815px;
+		width: 100%;
+	}
+	// .settings-form__form
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+	}
+	// .settings-form__title
+	&__title {
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 28px;
+		margin-bottom: 14px;
+	}
+	// .settings-form__fluid
+	&__fluid {
+		max-width: 399px;
+		width: 100%;
+		position: relative;
+	}
+	// .settings-form__label
+	&__label {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		color: #808080;
+		margin-bottom: 6px;
+		display: inline-block;
+	}
+	// .settings-form__input
+	&__input {
+		max-width: 399px;
+		width: 100%;
+		padding: 14px 42px 14px 14px;
+		border: 1px solid #cccccc;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		color: #000000;
+		position: relative;
+		z-index: 1;
+
+		transition: all 0.2s ease-in;
+	}
+	// . settings-form__btn
+	&__btn {
+		padding: 14px 0;
+		text-align: center;
+		background-color: #ff9fcd;
+		color: #fff;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 20px;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+	}
+}
+.editing {
+	position: absolute;
+	right: 14px;
+	bottom: 16px;
+	width: 18px;
+	height: 18px;
+	pointer-events: none;
+	z-index: 2;
+}
+.check {
+  width: 20px;
+  height: 20px;
+}
+
+.settings-form__input:active,
+.settings-form__input:focus ~ .editing {
+	path {
+		fill: #ff9fcd;
+	}
+}
+.settings-form__input:active,
+.settings-form__input:focus {
+	border-color: #ff9fcd;
+	transition: all 0.2s ease-in;
+}
+
+.save {
+}

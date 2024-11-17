@@ -1,0 +1,20 @@
+.nav {
+	// .nav__list
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+	// .nav__item
+	&__item {
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 28px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	&__text {
+		color: #ff9fcd;
+	}
+}

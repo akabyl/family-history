@@ -1,0 +1,11 @@
+.account {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	// .account__text
+	&__text {
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 28px;
+	}
+}

@@ -1,0 +1,21 @@
+.photo-gallery {
+	// .photo-gallery__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	// .photo-gallery__item
+	&__item {
+		padding: 27px 12px;
+		cursor: pointer;
+		overflow: hidden;
+		border-radius: 8px;
+		img {
+			width: 131px;
+			height: 131px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	}
+}
