@@ -148,6 +148,7 @@ button {
 .container-fluid {
   max-width: 1569px;
   margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
 /* Blocks */
