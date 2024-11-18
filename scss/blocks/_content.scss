@@ -47,3 +47,17 @@
 		border-radius: 8px;
 	}
 }
+
+@media (max-width: 1388px) {
+	.content__left {
+		max-width: 700px;
+	}
+	.content__right {
+		max-width: 700px;
+		width: auto;
+	}
+	.content__video {
+		max-width: 585px;
+		width: 100%;
+	}
+}
