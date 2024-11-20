@@ -1,34 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const modal = document.querySelector('.modal-wrapper');
 	const overlay = document.querySelector('.overlay');
-	const closeModalBtn = document.querySelector('.modal__close');
-	const openModalBtn = document.querySelectorAll('.modal-btn'); // Замените на кнопку, открывающую модалку
+	const modalWrapper = document.querySelectorAll('.modal-wrapper');
+	const openModalBtns = document.querySelectorAll('[data-target]');
 
-	// Открытие модального окна
-	const openModal = () => {
-		modal.classList.add('active');
-		overlay.classList.add('active');
-		document.body.style.overflow = 'hidden'; // Блокировка скролла
+	// Функция открытия модального окна
+	const openModal = targetId => {
+		// Закрыть все модалки перед открытием
+		modalWrapper.forEach(modal => modal.classList.remove('active'));
+
+		// Найти нужную модалку по id и открыть её
+		const modalToOpen = document.getElementById(targetId);
+		if (modalToOpen) {
+			modalToOpen.classList.add('active');
+			overlay.classList.add('active');
+			document.body.style.overflow = 'hidden'; // Отключение скролла страницы
+		}
 	};
 
-	// Закрытие модального окна
+	// Функция закрытия всех модальных окон
 	const closeModal = () => {
-		modal.classList.remove('active');
+		modalWrapper.forEach(modal => modal.classList.remove('active'));
 		overlay.classList.remove('active');
-		document.body.style.overflow = ''; // Возврат скролла
+		document.body.style.overflow = ''; // Включение скролла страницы
 	};
 
-	// Событие на открытие модалки (пример)
-	openModalBtn.forEach(item => item.addEventListener('click', openModal));
-	// openModalBtn.addEventListener('click', openModal);
+	// Привязка события открытия к кнопкам
+	openModalBtns.forEach(button => {
+		button.addEventListener('click', () => {
+			const targetId = button.getAttribute('data-target');
+			openModal(targetId);
+		});
+	});
 
-	// Событие на закрытие модалки
-	closeModalBtn.addEventListener('click', closeModal);
-	overlay.addEventListener('click', closeModal); // Закрытие при клике на затемнение
+	// Привязка события закрытия к кнопкам внутри модалок
+	modalWrapper.forEach(modal => {
+		const closeModalBtn = modal.querySelector('.modal__close');
+		if (closeModalBtn) {
+			closeModalBtn.addEventListener('click', closeModal);
+		}
+	});
 
-	// Закрытие при нажатии на Esc
+	// Закрытие при клике на затемнение
+	overlay.addEventListener('click', closeModal);
+
+	// Закрытие по нажатию клавиши Esc
 	document.addEventListener('keydown', e => {
-		if (e.key === 'Escape' && modal.classList.contains('active')) {
+		if (e.key === 'Escape') {
 			closeModal();
 		}
 	});

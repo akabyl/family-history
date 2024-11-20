@@ -52,7 +52,7 @@
 						<div class="settings__inner">
 							<div class="settings__top">
 								<div class="settings__left">
-									<button class="back">
+									<button class="back back-pages">
 										<svg
 											width="32"
 											height="32"
@@ -204,10 +204,10 @@
 											</svg>
 										</div>
 									</form>
-									<button class="settings-form__btn save">Сохранить изменения</button>
+									<button class="settings-form__btn save" data-target="modal-1">Сохранить изменения</button>
 								</div>
 								<div class="settings-form__inner">
-									<h2 class="settings-form__title">Малыш</h2>
+									<h2 class="settings-form__title" data-target="modal-2">Малыш</h2>
 									<form class="settings-form__form">
 										<div class="settings-form__fluid">
 											<label class="settings-form__label" for="child-name">Имя</label>
@@ -311,34 +311,45 @@
 				</section>
 			</main>
 		</div>
-		<div class="modal-wrapper">
-			<div class="modal">
-				<h2 class="modal__title">Введите код, который пришел вам на телефон +7 925 999 99 99</h2>
-				<div class="modal-fluid">
-					<input type="text" class="modal__input" placeholder="Введите код" id="code" name="code" />
-					<button class="send">
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								fill-rule="evenodd"
-								clip-rule="evenodd"
-								d="M15.6646 5.65557C16.1091 6.0868 16.1111 6.78792 15.6691 7.22159L8.41387 14.3402C8.20084 14.5492 7.91118 14.6668 7.60906 14.6668C7.30694 14.6668 7.01728 14.5492 6.80425 14.3402L4.33114 11.9137C3.88916 11.48 3.89119 10.7789 4.33567 10.3477C4.78015 9.91644 5.49877 9.91842 5.94076 10.3521L7.60906 11.989L14.0595 5.65999C14.5015 5.22632 15.2201 5.22435 15.6646 5.65557Z"
-								fill="#FF9FCD"
-							/>
-							<path
-								fill-rule="evenodd"
-								clip-rule="evenodd"
-								d="M15.6691 7.22159C16.1111 6.78792 16.1091 6.0868 15.6646 5.65557C15.2201 5.22435 14.5015 5.22632 14.0595 5.65999L7.60906 11.989L5.94076 10.3521C5.49877 9.91842 4.78015 9.91644 4.33567 10.3477C3.89119 10.7789 3.88916 11.48 4.33114 11.9137L6.80425 14.3402C7.01728 14.5492 7.30694 14.6668 7.60906 14.6668C7.91118 14.6668 8.20084 14.5492 8.41387 14.3402L15.6691 7.22159Z"
-								fill="#FF9FCD"
-							/>
-						</svg>
+		<div class="modal-wrapper" id="modal-1">
+			<div class="modal-container">
+				<div class="modal">
+					<h2 class="modal__title">Введите код, который пришел вам на телефон +7 925 999 99 99</h2>
+					<div class="modal-fluid">
+						<input type="text" class="modal__input" placeholder="Введите код" id="code" name="code" />
+						<button class="send">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M15.6646 5.65557C16.1091 6.0868 16.1111 6.78792 15.6691 7.22159L8.41387 14.3402C8.20084 14.5492 7.91118 14.6668 7.60906 14.6668C7.30694 14.6668 7.01728 14.5492 6.80425 14.3402L4.33114 11.9137C3.88916 11.48 3.89119 10.7789 4.33567 10.3477C4.78015 9.91644 5.49877 9.91842 5.94076 10.3521L7.60906 11.989L14.0595 5.65999C14.5015 5.22632 15.2201 5.22435 15.6646 5.65557Z"
+									fill="#FF9FCD"
+								/>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M15.6691 7.22159C16.1111 6.78792 16.1091 6.0868 15.6646 5.65557C15.2201 5.22435 14.5015 5.22632 14.0595 5.65999L7.60906 11.989L5.94076 10.3521C5.49877 9.91842 4.78015 9.91644 4.33567 10.3477C3.89119 10.7789 3.88916 11.48 4.33114 11.9137L6.80425 14.3402C7.01728 14.5492 7.30694 14.6668 7.60906 14.6668C7.91118 14.6668 8.20084 14.5492 8.41387 14.3402L15.6691 7.22159Z"
+									fill="#FF9FCD"
+								/>
+							</svg>
+						</button>
+					</div>
+
+					<button class="modal__btn">Подтвердить новый номер</button>
+					<a href="#!" class="modal__link">Не приходит код</a>
+					<button class="modal__close close">
+						<img src="./img/icons/close.svg" alt="" />
 					</button>
 				</div>
-
-				<button class="modal__btn">Подтвердить новый номер</button>
-				<a href="#!" class="modal__link">Не приходит код</a>
-				<button class="modal__close close">
-					<img src="./img/icons/close.svg" alt="" />
-				</button>
+			</div>
+		</div>
+		<div class="modal-wrapper" id="modal-2">
+			<div class="modal-container">
+				<div class="modal">
+					<h2 class="modal__title">Пример другой модалки</h2>
+					<p>Содержимое этой модалки другое, но стили общие.</p>
+					<button class="modal__close close">Закрыть</button>
+				</div>
 			</div>
 		</div>
 		<div class="overlay"></div>
