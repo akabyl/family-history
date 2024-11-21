@@ -1437,9 +1437,6 @@ button {
     align-items: start;
     gap: 15px;
   }
-  .head__link img {
-    display: none;
-  }
   .head__text {
     font-size: 22px;
     line-height: 28px;
